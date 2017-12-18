@@ -26,7 +26,7 @@
 
       public function deleteById($id) {
          $sql = "DELETE FROM " . $this->tableName . " WHERE id=" . $id;
-         return $this->koneksi->query($sql);
+         return $this->koneksi->exec($sql);
       }
 
       public function updateById($id, $name, $nim, $study) {
