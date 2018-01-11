@@ -9,7 +9,16 @@
    <div class="row">
       <h1><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
          Welcome to STT-NF</h1>
+         <br>
+      <button
+         type="button"
+         name="button"
+         onclick="window.location.href='insert.php'"
+         class="btn btn-primary">
+            Tambah Data
+      </button>
    </div>
+   <br>
    <div class="row">
       <table class="table table-bordered">
          <thead>

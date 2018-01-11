@@ -29,6 +29,13 @@
          return $this->koneksi->exec($sql);
       }
 
+      public function insert($name, $nim, $study) {
+         $sql = "INSERT INTO " . $this->tableName . "(name,nim,study) VALUES(
+                  '" . $name . "','" . $nim . "','" . $study . "'
+                )";
+         return $this->koneksi->exec($sql);
+      }
+
       public function updateById($id, $name, $nim, $study) {
          $sql = "UPDATE " . $this->tableName
                           . " SET name='" . $name
