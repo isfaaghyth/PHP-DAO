@@ -39,6 +39,16 @@
       } else {
          echo "Maaf, data tidak bisa dihapus.";
       }
+   } else if (isset($_POST['update'])) {
+      $name = $_POST['txtNama'];
+      $nim = $_POST['txtNim'];
+      $study = $_POST['txtProdi'];
+      $mhsUpdate = new Mahasiswa();
+      if ($mhsUpdate->updateById($id, $name, $nim, $study)) {
+         header("location:index.php");
+      } else {
+         echo "Maaf, gagal memperbaharui.";
+      }
    }
 ?>
 

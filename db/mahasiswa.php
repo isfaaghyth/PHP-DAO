@@ -38,10 +38,7 @@
 
       public function updateById($id, $name, $nim, $study) {
          $sql = "UPDATE " . $this->tableName
-                          . " SET name='" . $name
-                          . "' && nim=" . $nim
-                          . " && study='" . $study
-                          . "' WHERE id=" . $id;
+                          . " SET name='$name', nim=$nim, study='$study' WHERE id=$id";
          return $this->koneksi->query($sql);
       }
    }
